@@ -1,8 +1,7 @@
 import random
 import sys
 
-    
-
+  
 print("Welcome Numburdles! Guess the three digit number!")
    
 def number_generator():
@@ -35,7 +34,7 @@ def clues():
     print("you win!")
     stop_game()
     y=2
-  elif numbers3[0] and x[0] == numbers3[1] and x[1] or numbers3[1] and x[1] == numbers3[1] and x[2] or numbers3[0] and x[0] == numbers3[2] and x[2]:
+  elif numbers3[0] == x[0] and numbers3[1] and x[1] or numbers3[1] == x[1] and numbers3[2] and x[2] or numbers3[0] == x[0] and numbers3[2] == x[2]:
     print("You guess more than one correct!")   
   elif numbers3[0] == x[0]:
     print("You have a match, try again!")
@@ -43,7 +42,6 @@ def clues():
     print("You have a match, try again!")
   elif numbers3[2] == x[2]:
     print("You have a match, try again!")
-  
   else:
     print("No match, try again!")
 
@@ -53,7 +51,7 @@ def start_game():
   y=0
   while y != 2:
     player2 = input("What is your guess?: ")
-    if player2 > "999" or player2 < "111":
+    if player2 > "999" or player2 < "":
       print("This input is not valid")
     else:
       try:
@@ -68,7 +66,7 @@ start_game()
 
 
 
-#or numbers3[1,2] == x[1,2] or numbers3[0,2] == x[0,2]:
+
 
   
 # for x in range(7):
